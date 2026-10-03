@@ -1,0 +1,11 @@
+# Certificate bootstrap only. This HTTP site does not serve the gallery.
+server {
+    listen 80;
+    listen [::]:80;
+    server_name @DOMAIN@;
+    root "@ACME_ROOT@";
+    location ^~ /.well-known/acme-challenge/ {
+        try_files $uri =404;
+    }
+    location / { return 404; }
+}

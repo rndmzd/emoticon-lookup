@@ -11,6 +11,9 @@ __pycache__/
 # Connection details and local settings
 .env
 .env.*
+*.htpasswd
+*.pem
+*.key
 *.local.json
 
 # Generated galleries, exports, and downloaded media

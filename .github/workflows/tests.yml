@@ -36,3 +36,16 @@ jobs:
       - run: python scripts/build_examples.py --fixtures
       - run: npm ci
       - run: npm test
+
+  hosting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y nginx openssl shellcheck
+      - run: bash -n scripts/setup.sh scripts/install_nginx.sh deploy/certbot-reload.sh
+      - run: shellcheck scripts/setup.sh scripts/install_nginx.sh deploy/certbot-reload.sh
+      - run: python -m unittest discover -s tests -p 'test_deployment.py' -v
+      - run: python -m unittest discover -s tests -p 'test_hosting_nginx.py' -v

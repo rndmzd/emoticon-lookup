@@ -13,6 +13,10 @@ Build a portable, animated reference gallery of the Chaturbate emoticons used by
 
 Node.js is needed only for development tests. Opening a generated gallery needs only a browser.
 
+## Personal server hosting
+
+See [the hosting guide](docs/HOSTING.md) for Linux setup, atomic gallery publishing and rollback, an NGINX loopback origin, HTTPS reverse proxy configuration, password protection, certificate renewal, and integration with an existing NGINX site. The server hosts the generated HTML; Python and MongoDB are only needed where you generate it. Browser group edits stay local unless you save and publish a portable copy.
+
 ## Setup and run
 
 Requires Python 3.10+ and MongoDB 4.2+ when using the database source.
