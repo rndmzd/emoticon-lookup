@@ -1,0 +1,38 @@
+# Local environments and dependencies
+.venv/
+venv/
+env/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Connection details and local settings
+.env
+.env.*
+*.local.json
+
+# Generated galleries, exports, and downloaded media
+.emoticon-cache/
+media-cache/
+work/
+outputs/
+generated/
+tests/fixtures/
+*.html
+*.pdf
+*.gif
+*.png
+*.media
+*.json
+!package.json
+!package-lock.json
+!examples/messages.json
+!examples/animation_demo.html
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

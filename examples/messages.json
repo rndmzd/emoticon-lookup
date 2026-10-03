@@ -1,0 +1,10 @@
+[
+  {
+    "_id": "demo_user",
+    "messages": [
+      ":etextraryan",
+      "An example with :etextraryan later in the message",
+      ":etextrary"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "emoticon-lookup-tests",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DOM checks for the standalone emoticon gallery",
+  "scripts": {
+    "test": "node tests/gallery_features.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
